@@ -16,7 +16,7 @@ function Quote(props){
             <h4 id="author">~{quote.author}</h4>
             <div id = "quote-div">
                 <button id="new-quote" onClick = {handleClick}>New Quote</button>
-                <a href = "" id="tweet-quote">Tweet</a>
+                <a href = "https://twitter.com/intent/tweet" id="tweet-quote" target="_blank">Tweet</a>
             </div>
             
         </div>
