@@ -2,17 +2,28 @@ import React from "react";
 import '../App.css';
 
 function Quote(props){
-    let randomNumber = Math.floor(Math.random() * props.data.length);
-    const [quote, setQuote] = React.useState(props.data[randomNumber]);
+    const [quote, setQuote] = React.useState([]);
+    React.useEffect(() => {
+        fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(response => setQuote(response))
+        .catch(err => console.error(err));
+    }, [])
+    // let randomNumber = Math.floor(Math.random() * props.data.length);
+    // const [quote, setQuote] = React.useState(props.data[randomNumber]);
 
     function handleClick(){
-        let randomNumber = Math.floor(Math.random() * props.data.length);
-        setQuote(props.data[randomNumber])
+        // let randomNumber = Math.floor(Math.random() * props.data.length);
+        // setQuote(props.data[randomNumber])
+        fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(response => setQuote(response))
+        .catch(err => console.error(err));
     }
 
     return (
         <div id="quote-box">
-            <h1 id="text">"{quote.quote}"</h1>
+            <h1 id="text">"{quote.content}"</h1>
             <h4 id="author">~{quote.author}</h4>
             <div id = "quote-div">
                 <button id="new-quote" onClick = {handleClick}>New Quote</button>
