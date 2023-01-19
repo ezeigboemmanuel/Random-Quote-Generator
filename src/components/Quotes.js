@@ -29,6 +29,14 @@ function Quote(props){
                 <button id="new-quote" onClick = {handleClick}>New Quote</button>
                 <a href = {`https://twitter.com/intent/tweet?text="${quote.content}"%20by%20${quote.author}`} id="tweet-quote" target="_blank">Tweet</a>
             </div>
+
+            <div id = "footer">
+                <p>Made by Ezeigbo Emmanuel</p>
+                <div id = "socialLinks">
+                    <a href = "https://github.com/ezeigboemmanuel" >Github</a>
+                    <a href = "https://web.facebook.com/charles.ezeigbo.5" >Facebook</a>
+                </div>
+            </div>
             
         </div>
     )

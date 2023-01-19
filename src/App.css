@@ -6,7 +6,8 @@
   align-items: center;
   background-color: rgb(111, 180, 6);
   text-align: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 #new-quote{
@@ -44,4 +45,14 @@
 #text{
   font-family: 'Patrick Hand', cursive;
   font-size: 50px;
+}
+
+#footer{
+  margin: 0 5px 10px 5px;
+}
+
+#socialLinks{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
